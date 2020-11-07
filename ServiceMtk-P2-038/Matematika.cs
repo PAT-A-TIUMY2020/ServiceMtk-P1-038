@@ -12,30 +12,114 @@ namespace ServiceMtk_P2_038
     {
         public int Bagi(int a, int b)
         {
-            return a / b;
+            try
+            {
+                return a / b;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                // secara default
+                // throw new Exception(ex.Message) /// pesan error secara default
+                // throw new FaultException ("Pesan Salan"); // Untuk meloloskan pesan error yang dikirim client
+
+                MathFault mf = new MathFault();
+                mf.Kode = "Inputan Yang Anda Masukan Salah";
+                mf.Pesan = "Masukkan input yang benar";
+                throw new FaultException<MathFault>(mf);
+            }
         }
 
         public int Kali(int a, int b)
         {
-            return a * b;
+            try
+            {
+                return a * b;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                // secara default
+                // throw new Exception(ex.Message) /// pesan error secara default
+                // throw new FaultException ("Pesan Salan"); // Untuk meloloskan pesan error yang dikirim client
+
+                MathFault mf = new MathFault();
+                mf.Kode = "Inputan Yang Anda Masukan Salah";
+                mf.Pesan = "Masukkan input yang benar";
+                throw new FaultException<MathFault>(mf);
+            }
+            
         }
 
         public int Kurang(int a, int b)
         {
-            return a - b;
+            try
+            {
+                return a - b;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                // secara default
+                // throw new Exception(ex.Message) /// pesan error secara default
+                // throw new FaultException ("Pesan Salan"); // Untuk meloloskan pesan error yang dikirim client
+
+                MathFault mf = new MathFault();
+                mf.Kode = "Inputan Yang Anda Masukan Salah";
+                mf.Pesan = "Masukkan input yang benar";
+                throw new FaultException<MathFault>(mf);
+            }
+            
         }
 
         public int Tambah(int a, int b)
         {
-            return a + b;
+            try
+            {
+                return a + b;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                // secara default
+                // throw new Exception(ex.Message) /// pesan error secara default
+                // throw new FaultException ("Pesan Salan"); // Untuk meloloskan pesan error yang dikirim client
+
+                MathFault mf = new MathFault();
+                mf.Kode = "Inputan Yang Anda Masukan Salah";
+                mf.Pesan = "Masukkan input yang benar";
+                throw new FaultException<MathFault>(mf);
+            }
+            
         }
 
         public Koordinat TKoordinat(Koordinat a, Koordinat b)
         {
-            Koordinat hasil = new Koordinat();
-            hasil.X = a.X + b.X;
-            hasil.Y = a.Y + b.Y;
-            return hasil;
+            try
+            {
+                Koordinat hasil = new Koordinat();
+                hasil.X = a.X + b.X;
+                hasil.Y = a.Y + b.Y;
+                return hasil;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                // secara default
+                // throw new Exception(ex.Message) /// pesan error secara default
+                // throw new FaultException ("Pesan Salan"); // Untuk meloloskan pesan error yang dikirim client
+
+                MathFault mf = new MathFault();
+                mf.Kode = "Inputan Yang Anda Masukan Salah";
+                mf.Pesan = "Masukkan input yang benar";
+                throw new FaultException<MathFault>(mf);
+            }
+            
         }
     }
 }
